@@ -24,10 +24,7 @@ var AppComponent = (function () {
         this.selectedHero = hero;
     };
     AppComponent.prototype.ngOnInit = function () {
-        this.heroService.getHeroes()
-            .then(function (data) {
-            this.heroes = data;
-        });
+        this.heroes = this.heroService.getHeroes();
     };
     AppComponent = __decorate([
         core_1.Component({
