@@ -1,37 +1,17 @@
 import { Component, OnInit } from "@angular/core";
-import { HeroService } from "./hero.service"
-import { Hero } from "./hero";
-import { HeroDetailComponent } from './hero-detail.component'
+import { ROUTER_DIRECTIVES } from '@angular/router';
+import { HeroService } from './hero.service';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/views/hero.html',
-    styleUrls: ['app/styles/hero.css'],
-    directives: [HeroDetailComponent],
+    templateUrl: 'app/views/app.html',
+    directives: [ROUTER_DIRECTIVES],
     providers: [HeroService]
-
 })
 
 export class AppComponent implements OnInit{
     title = "Tour of heroes";
-    // hero = 'Windstorm';
-    // hero : Hero = {
-    //     id: 1,
-    //     name: 'WindStorm'
-    // };
-    // heroes = HEROES;
-    heroes: Hero[];
-    selectedHero: Hero;
-    /**
-     * 点击选择英雄
-     * @param hero
-     */
-    onSelect (hero) {
-        this.selectedHero = hero;
-    }
-
-    constructor(private heroService: HeroService){}
     ngOnInit(){
-        this.heroes = this.heroService.getHeroes();
+
     }
 }
