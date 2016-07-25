@@ -1,0 +1,4 @@
+<div *ngIf="field && !field.pristine">
+  <img class="valid" src="./images/valid.svg" *ngIf="field.valid"/>
+  <img class="invalid" src="./images/invalid.svg" *ngIf="!field.valid"/>
+</div>

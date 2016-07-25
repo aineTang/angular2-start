@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var hero_service_1 = require("./hero.service");
+var router_1 = require('@angular/router');
 var hero_detail_component_1 = require('./hero-detail.component');
 var HeroesComponent = (function () {
     // hero = 'Windstorm';
@@ -18,8 +19,9 @@ var HeroesComponent = (function () {
     //     name: 'WindStorm'
     // };
     // heroes = HEROES;
-    function HeroesComponent(heroService) {
+    function HeroesComponent(heroService, router) {
         this.heroService = heroService;
+        this.router = router;
     }
     /**
      * 点击选择英雄
@@ -45,7 +47,7 @@ var HeroesComponent = (function () {
             styleUrls: ['app/styles/hero.css'],
             directives: [hero_detail_component_1.HeroDetailComponent]
         }), 
-        __metadata('design:paramtypes', [hero_service_1.HeroService])
+        __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.Router])
     ], HeroesComponent);
     return HeroesComponent;
 }());

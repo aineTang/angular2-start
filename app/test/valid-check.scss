@@ -1,0 +1,16 @@
+@import "../../_common/styles/common";
+:host {
+  display: inline-block;
+}
+
+.valid {
+  path {
+    fill: $brand-success;
+  }
+}
+
+.invalid {
+  path {
+    fill: $brand-danger;
+  }
+}

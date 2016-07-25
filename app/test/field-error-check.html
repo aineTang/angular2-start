@@ -1,0 +1,5 @@
+<div *ngIf="field && !field.pristine && !field.valid">
+  <ul>
+    <li *ngFor="let error of errors">{{error.message}}</li>
+  </ul>
+</div>
